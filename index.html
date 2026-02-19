@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBC AI Workspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">B</div>
+          <div>
+            <h1>BBC AI</h1>
+            <p>Build like Replit</p>
+          </div>
+        </div>
+        <button class="new-project">+ New Project</button>
+        <nav>
+          <p class="section-title">Projects</p>
+          <ul>
+            <li class="active">Agent Dashboard</li>
+            <li>Landing Generator</li>
+            <li>API Playground</li>
+          </ul>
+        </nav>
+        <nav>
+          <p class="section-title">Tools</p>
+          <ul>
+            <li>Deployments</li>
+            <li>Secrets</li>
+            <li>Database</li>
+            <li>Analytics</li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <h2>Agent Dashboard</h2>
+            <p>AI coding companion with full-stack workflow</p>
+          </div>
+          <div class="actions">
+            <button class="ghost">Preview</button>
+            <button class="primary">Deploy</button>
+          </div>
+        </header>
+
+        <section class="feature-grid">
+          <article class="feature-card">
+            <h3>🤖 AI Agent</h3>
+            <p>
+              Ask BBC AI Agent to scaffold apps, fix bugs, run refactors, and
+              explain code—just like Replit agent workflows.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>⚡ Instant Runtime</h3>
+            <p>
+              Spin up projects quickly with a cloud-like workspace and live
+              console feedback.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>🚀 One-Click Deploy</h3>
+            <p>
+              Publish your app in seconds with staging and production controls.
+            </p>
+          </article>
+        </section>
+
+        <section class="panels">
+          <div class="panel editor">
+            <div class="panel-header">
+              <span>Editor</span>
+              <span class="dot"></span>
+            </div>
+            <pre><code>function buildWithBBCAI(prompt) {
+  return `Generating app for: ${prompt}`;
+}
+
+console.log(buildWithBBCAI("Create a booking SaaS"));</code></pre>
+          </div>
+
+          <div class="panel agent">
+            <div class="panel-header">
+              <span>BBC AI Agent</span>
+              <span class="status">Online</span>
+            </div>
+            <div class="chat" id="chatLog">
+              <p><strong>You:</strong> Build me a fullstack todo app.</p>
+              <p><strong>BBC AI:</strong> Done. I created frontend, backend, and deployment files.</p>
+            </div>
+            <form id="agentForm">
+              <input
+                id="agentInput"
+                placeholder="Tell BBC AI Agent what to build..."
+                required
+              />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
